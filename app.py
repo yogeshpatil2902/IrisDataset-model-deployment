@@ -9,7 +9,7 @@ with open(r"rf.pkl",'rb') as model_file:
 
 app = Flask(__name__)
 
-@app.route("/", methods=['POST'])
+@app.route("/", methods=['GET','POST'])
 def predict():
     if request.method == 'POST':
         s_length = request.form['s_length']
